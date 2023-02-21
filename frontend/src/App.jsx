@@ -11,7 +11,9 @@ function App() {
       .then((data) => (greet.innerHTML = JSON.stringify(data)));
   }
   // Similar to componentDidMount and componentDidUpdate:
-  useEffect(getHello);
+  useEffect(() => {
+    getHello;
+  }, []);
 
   return (
     <div className='App'>
