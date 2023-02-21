@@ -25,7 +25,7 @@ function App() {
         </p>
       </div>
       <p className='read-the-docs'>
-        Click on the Vite and React logos to learn more
+        박상민은 신인가 ?
       </p>
     </div>
   );
