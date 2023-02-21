@@ -12,7 +12,7 @@ function App() {
   }
   // Similar to componentDidMount and componentDidUpdate:
   useEffect(() => {
-    getHello;
+    getHello();
   }, []);
 
   return (
