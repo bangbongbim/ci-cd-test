@@ -4,6 +4,14 @@ import './App.css';
 
 function App() {
   const [count, setCount] = useState(0);
+  function getHello() {
+    const greet = document.getElementById('greet');
+    fetch('http://localhost:4000/api/hello')
+      .then((response) => response.json())
+      .then((data) => (greet.innerHTML = JSON.stringify(data)));
+  }
+  // Similar to componentDidMount and componentDidUpdate:
+  useEffect(getHello);
 
   return (
     <div className='App'>
@@ -23,10 +31,11 @@ function App() {
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
+        <p>
+          api called: <code id='greet'></code>
+        </p>
       </div>
-      <p className='read-the-docs'>
-        박상민은 신인가 ?
-      </p>
+      <p className='read-the-docs'>박상민은 신인가 ?</p>
     </div>
   );
 }
